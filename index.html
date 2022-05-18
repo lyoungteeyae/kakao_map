@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scale=no">
     <!-- <link rel="stylesheet" href="css/initial.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
@@ -39,7 +40,13 @@
       </header>
       <main>
         <!-- //메인배너 -->
-        <div class="mainbanner"></div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="mainbanner swiper-slide"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
         <!-- 컨텐츠 -->
         <div class="container">
           <div class="content">
@@ -116,5 +123,13 @@
         </div>
       </footer>
     </div>
+    <script>
+     var swiper = new Swiper(".mySwiper", {
+       navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+     });
+   </script>
   </body>
 </html>
